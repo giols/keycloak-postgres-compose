@@ -2,7 +2,7 @@ version: '3.7'
 
 services:
   postgres:
-    image: postgres:16.2
+    image: postgres:18.1
     volumes:
       - postgres_data:/var/lib/postgresql/data
     environment:
@@ -13,7 +13,7 @@ services:
       - keycloak_network
 
   keycloak:
-    image: quay.io/keycloak/keycloak:23.0.6
+    image: quay.io/keycloak/keycloak:26.5.0
     command: start
     environment:
       KC_HOSTNAME: localhost
